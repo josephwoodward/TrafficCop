@@ -1,3 +1,3 @@
 # TrafficCop
 
-TrafficCop is super simple way of analyzing incoming traffic an imposing rules on chosen requests.
+TrafficCop is super simple way of analyzing incoming traffic and imposing rules on chosen requests.
