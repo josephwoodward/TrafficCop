@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficCop.Core", "TrafficCop\TrafficCop.Core.csproj", "{F10AB848-09D0-41F9-9ED4-62E459B8E19A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficCop.Demo", "TrafficCop.Demo\TrafficCop.Demo.csproj", "{DCDC3607-2794-4B83-9D6D-429789AD04A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficCop.Tests", "TrafficCop.Tests\TrafficCop.Tests.csproj", "{0967E8AC-8DAA-460D-8A62-6CAFA73BF6C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F10AB848-09D0-41F9-9ED4-62E459B8E19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10AB848-09D0-41F9-9ED4-62E459B8E19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10AB848-09D0-41F9-9ED4-62E459B8E19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10AB848-09D0-41F9-9ED4-62E459B8E19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCDC3607-2794-4B83-9D6D-429789AD04A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCDC3607-2794-4B83-9D6D-429789AD04A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCDC3607-2794-4B83-9D6D-429789AD04A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCDC3607-2794-4B83-9D6D-429789AD04A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0967E8AC-8DAA-460D-8A62-6CAFA73BF6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0967E8AC-8DAA-460D-8A62-6CAFA73BF6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0967E8AC-8DAA-460D-8A62-6CAFA73BF6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0967E8AC-8DAA-460D-8A62-6CAFA73BF6C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
