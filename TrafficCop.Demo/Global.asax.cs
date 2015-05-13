@@ -16,7 +16,7 @@ namespace TrafficCop.Demo
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            Core.TrafficCop.Register(new MyRegistry());
+            Core.TrafficCop.Register(new MyCustomRegistry());
         }
 
         protected void Application_BeginRequest()

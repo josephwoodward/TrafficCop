@@ -1,19 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TrafficCop.Core
 {
     public abstract class TrafficCopRegistration
     {
-        public IList<string> RoutesList = new List<string>();
+        public IList<ITrafficCopInspection> RouteCommands = new List<ITrafficCopInspection>();
 
-        public void WatchRoute(string route)
+        public void WatchRoute(ITrafficCopInspection trafficCopRequest)
         {
-            this.RoutesList.Add(route);
+            this.RouteCommands.Add(trafficCopRequest);
         }
 
-        public virtual IList<string> GetRoutes()
+        public void WatchRoute(Func<IRequestContext, bool> action)
         {
-            return this.RoutesList;
+        }
+
+        public virtual IList<ITrafficCopInspection> GetRoutes()
+        {
+            return this.RouteCommands;
         }
     }
 }
