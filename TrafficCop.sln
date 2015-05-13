@@ -5,9 +5,9 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficCop.Demo", "TrafficCop.Demo\TrafficCop.Demo.csproj", "{DCDC3607-2794-4B83-9D6D-429789AD04A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficCop.Tests", "TrafficCop.Tests\TrafficCop.Tests.csproj", "{0967E8AC-8DAA-460D-8A62-6CAFA73BF6C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficCop.Tests", "TrafficCop.Tests\TrafficCop.Tests.csproj", "{F5D5413F-4009-493A-B634-FFF3188B852F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficCop.Core", "TrafficCop.Core\TrafficCop.Core.csproj", "{F10AB848-09D0-41F9-9ED4-62E459B8E19A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficCop.Core", "TrafficCop.Core\TrafficCop.Core.csproj", "{4195D1CC-A4AE-460F-A5FB-C81E1779EA25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{DCDC3607-2794-4B83-9D6D-429789AD04A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCDC3607-2794-4B83-9D6D-429789AD04A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCDC3607-2794-4B83-9D6D-429789AD04A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0967E8AC-8DAA-460D-8A62-6CAFA73BF6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0967E8AC-8DAA-460D-8A62-6CAFA73BF6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0967E8AC-8DAA-460D-8A62-6CAFA73BF6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0967E8AC-8DAA-460D-8A62-6CAFA73BF6C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F10AB848-09D0-41F9-9ED4-62E459B8E19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F10AB848-09D0-41F9-9ED4-62E459B8E19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F10AB848-09D0-41F9-9ED4-62E459B8E19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F10AB848-09D0-41F9-9ED4-62E459B8E19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5D5413F-4009-493A-B634-FFF3188B852F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D5413F-4009-493A-B634-FFF3188B852F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D5413F-4009-493A-B634-FFF3188B852F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D5413F-4009-493A-B634-FFF3188B852F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4195D1CC-A4AE-460F-A5FB-C81E1779EA25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4195D1CC-A4AE-460F-A5FB-C81E1779EA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4195D1CC-A4AE-460F-A5FB-C81E1779EA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4195D1CC-A4AE-460F-A5FB-C81E1779EA25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
