@@ -11,7 +11,7 @@ namespace TrafficCop.Core
             this.RoutesList.Add(route);
         }
 
-        public IList<string> GetRoutes()
+        public virtual IList<string> GetRoutes()
         {
             return this.RoutesList;
         }

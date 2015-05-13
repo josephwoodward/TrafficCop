@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TrafficCop.Core
 {
@@ -6,6 +7,8 @@ namespace TrafficCop.Core
     {
         public static void Register(TrafficCopRegistration customRegistry)
         {
+            if (customRegistry == null) throw new ArgumentNullException("customRegistry");
+
             IList<string> routes = customRegistry.GetRoutes();
         }
 
