@@ -5,9 +5,9 @@ namespace TrafficCop.Core
 {
     public abstract class TrafficCopRegistration
     {
-        public IList<ITrafficCopInspection> RouteCommands = new List<ITrafficCopInspection>();
+        public IList<TrafficCopRoutePolicy> RouteCommands = new List<TrafficCopRoutePolicy>();
 
-        public void WatchRoute(ITrafficCopInspection trafficCopRequest)
+        public void WatchRoute(TrafficCopRoutePolicy trafficCopRequest)
         {
             this.RouteCommands.Add(trafficCopRequest);
         }
@@ -16,7 +16,7 @@ namespace TrafficCop.Core
         {
         }
 
-        public virtual IList<ITrafficCopInspection> GetRoutes()
+        public virtual IList<TrafficCopRoutePolicy> GetRoutes()
         {
             return this.RouteCommands;
         }

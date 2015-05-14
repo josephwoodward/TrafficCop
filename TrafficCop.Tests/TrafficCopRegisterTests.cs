@@ -15,7 +15,7 @@ namespace TrafficCop.Tests
         }
 
         [Test]
-        public void Should_not_throw_exception_if_argument_is_suppled()
+        public void Should_not_throw_exception_if_argument_is_supplied()
         {
             Should.NotThrow(() => { Core.TrafficCop.Register(this.TestRegistration.Object); });
         }

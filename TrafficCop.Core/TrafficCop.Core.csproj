@@ -40,8 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\NoTrafficCopRoutesException.cs" />
     <Compile Include="IRequestContext.cs" />
-    <Compile Include="ITrafficCopInspection.cs" />
+    <Compile Include="TrafficCopRoutePolicy.cs" />
     <Compile Include="RequestContext.cs" />
     <Compile Include="TrafficCopRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

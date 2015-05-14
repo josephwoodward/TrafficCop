@@ -1,7 +1,11 @@
-﻿namespace TrafficCop.Core
+﻿using System;
+
+namespace TrafficCop.Core
 {
     public interface IRequestContext
     {
-        string IpAddress { get; set; }
+        string IpAddress { get; }
+
+        Uri ReferrerUrl { get; }
     }
 }

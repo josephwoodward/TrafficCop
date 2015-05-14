@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web;
+using TrafficCop.Core.Exceptions;
 
 namespace TrafficCop.Core
 {
     public class TrafficCop
     {
-        public static IList<ITrafficCopInspection> Routes { get; set; }
+        public static IList<TrafficCopRoutePolicy> Routes { get; set; }
 
         public static void Register(TrafficCopRegistration customRegistry)
         {
@@ -18,18 +18,34 @@ namespace TrafficCop.Core
 
         public static void Watch()
         {
+            WatchTraffic(new RequestContext());
+        }
 
-            string ipAddress = HttpContext.Current.Request.UserHostAddress;
+        public static void Watch(IRequestContext context)
+        {
+            if (context == null)
+                throw new ArgumentNullException("context");
 
-            IRequestContext context = new RequestContext { IpAddress = ipAddress };
+            WatchTraffic(context);
+        }
 
-            foreach (ITrafficCopInspection route in Routes)
+        private static void WatchTraffic(IRequestContext context)
+        {
+            ThrowIfNoRoutes();
+
+            foreach (TrafficCopRoutePolicy route in Routes)
             {
                 if (route.RequestIsGuilty(context))
                 {
-                    route.Penalty();
+                    route.IssuePenalty();
                 }
             }
+        }
+
+        private static void ThrowIfNoRoutes()
+        {
+            if (Routes == null)
+                throw new NoTrafficCopRoutesException("No routes specified");
         }
     }
 }
