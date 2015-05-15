@@ -32,6 +32,11 @@ namespace TrafficCop.Core
             get { return this.Context.Request.UrlReferrer; }
         }
 
+        public HttpRequestBase HttpRequest
+        {
+            get { return this.Context.Request; }
+        }
+
         private string GetIpAddress()
         {
             string ip = (Context.Request.ServerVariables["HTTP_X_FORWARDED_FOR"] ?? "").Split(',').Last().Trim();

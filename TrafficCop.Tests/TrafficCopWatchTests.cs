@@ -60,6 +60,21 @@ namespace TrafficCop.Tests
         }
 
         [Test]
+        public void Should_allow_empty_routes()
+        {
+            // Arrange
+            var testRoutes = new List<TrafficCopRoutePolicy>();
+            this.TestRegistration.Setup(x => x.GetRoutes()).Returns(testRoutes);
+
+            // Act
+            Core.TrafficCop.Register(this.TestRegistration.Object);
+
+            // Assert
+            Should.NotThrow(() => { Core.TrafficCop.Watch(); });
+        }
+
+
+        [Test]
         public void Should_try_match_policy()
         {
             // Arrange

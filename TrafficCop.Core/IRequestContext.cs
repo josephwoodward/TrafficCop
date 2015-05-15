@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 
 namespace TrafficCop.Core
 {
@@ -7,5 +8,7 @@ namespace TrafficCop.Core
         string IpAddress { get; }
 
         Uri ReferrerUrl { get; }
+
+        HttpRequestBase HttpRequest { get; }
     }
 }
