@@ -35,9 +35,10 @@ namespace TrafficCop.Core
 
             foreach (TrafficCopRoutePolicy route in Routes)
             {
-                if (route.RequestIsGuilty(context))
+                if (route.Match(context))
                 {
-                    route.IssuePenalty();
+                    route.MatchAction();
+                    route.ActionExecuted();
                 }
             }
         }

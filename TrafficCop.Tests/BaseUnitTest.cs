@@ -8,22 +8,26 @@ namespace TrafficCop.Tests
     public class BaseUnitTest
     {
         protected Mock<TestRegistration> TestRegistration { get; set; }
+        protected Mock<TrafficCopRoutePolicy> GuiltyTestPolicyMock { get; set; }
+        protected IRequestContext TestRequestContext { get; set; }
 
         [SetUp]
         public void TestSetup()
         {
+            this.TestRequestContext = new DummyContext();
             this.TestRegistration = new Mock<TestRegistration>();
+            this.GuiltyTestPolicyMock = new Mock<TrafficCopRoutePolicy>();
         }
     }
 
     public class GuiltyTestPolicy : TrafficCopRoutePolicy
     {
-        public override bool RequestIsGuilty(IRequestContext requestContext)
+        public override bool Match(IRequestContext requestContext)
         {
             return true;
         }
 
-        public override void IssuePenalty()
+        public override void MatchAction()
         {
             
         }
@@ -31,12 +35,12 @@ namespace TrafficCop.Tests
 
     public class InnocentTestPolicy : TrafficCopRoutePolicy
     {
-        public override bool RequestIsGuilty(IRequestContext requestContext)
+        public override bool Match(IRequestContext requestContext)
         {
             return false;
         }
 
-        public override void IssuePenalty()
+        public override void MatchAction()
         {
 
         }
