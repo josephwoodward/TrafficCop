@@ -7,7 +7,7 @@ namespace TrafficCop.Demo
         public MyCustomRegistry()
         {
             this.WatchRoute(new BlockFreeSocialButtons());
-            this.WatchRoute(x => x.IpAddress == "127.0.0.1");
+            // this.WatchRoute(x => x.IpAddress == "127.0.0.1");
         }
     }
 }
