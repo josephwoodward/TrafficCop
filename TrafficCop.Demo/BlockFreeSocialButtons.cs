@@ -11,9 +11,10 @@ namespace TrafficCop.Demo
             return isLocal;
         }
 
-        public override void MatchAction(TrafficCopActions actions)
+        public override void MatchAction(object action)
         {
-            actions.Redirect301("http://www.google.co.uk");
+            var act = action as CustomAction;
+            if (act != null) act.MyCustomAction();
         }
     }
 }

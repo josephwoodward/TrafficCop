@@ -37,7 +37,7 @@ namespace TrafficCop.Core
             {
                 if (route.Match(context))
                 {
-                    route.MatchAction(new StandardActions());
+                    route.MatchAction(new CustomAction());
                     route.ActionExecuted();
                 }
             }

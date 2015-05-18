@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace TrafficCop.Core
 {
@@ -10,10 +9,6 @@ namespace TrafficCop.Core
         public void WatchRoute(TrafficCopRoutePolicy trafficCopRequest)
         {
             this.RouteCommands.Add(trafficCopRequest);
-        }
-
-        public void WatchRoute(Func<IRequestContext, bool> action)
-        {
         }
 
         public virtual IList<TrafficCopRoutePolicy> GetRoutes()
