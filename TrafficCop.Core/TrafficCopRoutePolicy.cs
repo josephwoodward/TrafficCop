@@ -1,10 +1,12 @@
-﻿namespace TrafficCop.Core
+﻿using System.Net;
+
+namespace TrafficCop.Core
 {
     public abstract class TrafficCopRoutePolicy
     {
-        abstract public bool Match(IRequestContext requestContext);
+        public abstract bool Match(IRequestContext requestContext);
 
-        abstract public void MatchAction();
+        public abstract void MatchAction(TrafficCopActions actions);
 
         public virtual void ActionExecuted()
         {

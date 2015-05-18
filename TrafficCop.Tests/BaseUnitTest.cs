@@ -27,9 +27,9 @@ namespace TrafficCop.Tests
             return true;
         }
 
-        public override void MatchAction()
+        public override void MatchAction(TrafficCopActions actions)
         {
-            
+            throw new System.NotImplementedException();
         }
     }
 
@@ -40,10 +40,9 @@ namespace TrafficCop.Tests
             return false;
         }
 
-        public override void MatchAction()
+        public override void MatchAction(TrafficCopActions actions)
         {
-
+            throw new System.NotImplementedException();
         }
     }
-
 }

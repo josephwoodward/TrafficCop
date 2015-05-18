@@ -1,5 +1,4 @@
-﻿using System.Web;
-using TrafficCop.Core;
+﻿using TrafficCop.Core;
 
 namespace TrafficCop.Demo
 {
@@ -12,10 +11,9 @@ namespace TrafficCop.Demo
             return isLocal;
         }
 
-        public override void MatchAction()
+        public override void MatchAction(TrafficCopActions actions)
         {
-            //HttpContext.Current.Response.StatusCode = 404;
-            HttpContext.Current.Response.Redirect("http://www.google.co.uk");
+            actions.Redirect301("http://www.google.co.uk");
         }
     }
 }
