@@ -3,15 +3,17 @@ using System.Web;
 
 namespace TrafficCop.Core
 {
-    public abstract class ActionContext
+    public abstract class MatchActionResult
     {
         private readonly Func<HttpContextBase> _contextMaker = () => new HttpContextWrapper(HttpContext.Current);
 
-        protected ActionContext()
+        public object CustomActions { get; set; }
+
+        protected MatchActionResult()
         {
         }
 
-        protected ActionContext(Func<HttpContextBase> context)
+        protected MatchActionResult(Func<HttpContextBase> context)
         {
             _contextMaker = context ?? _contextMaker;
         }

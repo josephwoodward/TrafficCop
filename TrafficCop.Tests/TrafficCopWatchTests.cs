@@ -110,7 +110,7 @@ namespace TrafficCop.Tests
             Core.TrafficCop.Watch(this.TestRequestContext);
 
             // Assert
-            this.GuiltyTestPolicyMock.Verify(x => x.MatchAction(It.IsAny<ActionContext>()), Times.Once);
+            this.GuiltyTestPolicyMock.Verify(x => x.MatchAction(It.IsAny<MatchActionResult>()), Times.Once);
         }
 
         [Test]
@@ -130,7 +130,7 @@ namespace TrafficCop.Tests
             Core.TrafficCop.Watch(this.TestRequestContext);
 
             // Assert
-            this.GuiltyTestPolicyMock.Verify(x => x.MatchAction(It.IsAny<ActionContext>()), Times.Never);
+            this.GuiltyTestPolicyMock.Verify(x => x.MatchAction(It.IsAny<MatchActionResult>()), Times.Never);
         }
 
         [Test]

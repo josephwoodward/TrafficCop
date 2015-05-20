@@ -11,10 +11,10 @@ namespace TrafficCop.Demo
             return isLocal;
         }
 
-        public override void MatchAction(object action)
+        public override void MatchAction(object actions)
         {
-            var act = action as CustomAction;
-            if (act != null) act.MyCustomAction();
+            var act = actions as MyCustomActions;
+            if (act != null) act.GoToStackOverflow();
         }
     }
 }

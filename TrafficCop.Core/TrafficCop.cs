@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web.UI;
 using TrafficCop.Core.Exceptions;
 
 namespace TrafficCop.Core
@@ -7,6 +8,7 @@ namespace TrafficCop.Core
     public class TrafficCop
     {
         public static IList<TrafficCopRoutePolicy> Routes { get; set; }
+        public static MatchActionResult Actions { get; set; }
 
         public static void Register(TrafficCopRegistration customRegistry)
         {
@@ -14,6 +16,7 @@ namespace TrafficCop.Core
                 throw new ArgumentNullException("customRegistry");
 
             Routes = customRegistry.GetRoutes();
+            Actions = customRegistry.MatchActions;
         }
 
         public static void Watch()
@@ -37,7 +40,7 @@ namespace TrafficCop.Core
             {
                 if (route.Match(context))
                 {
-                    route.MatchAction(new CustomAction());
+                    route.MatchAction(Actions);
                     route.ActionExecuted();
                 }
             }

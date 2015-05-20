@@ -6,6 +6,7 @@ namespace TrafficCop.Demo
     {
         public MyCustomRegistry()
         {
+            this.MatchActions = new MyCustomActions();
             this.WatchRoute(new BlockFreeSocialButtons());
         }
     }

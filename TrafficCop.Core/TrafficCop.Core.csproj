@@ -40,11 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomAction.cs" />
-    <Compile Include="StandardActions.cs" />
+    <Compile Include="StandardMatchActionResult.cs" />
     <Compile Include="Exceptions\NoTrafficCopRoutesException.cs" />
     <Compile Include="IRequestContext.cs" />
-    <Compile Include="ActionContext.cs" />
+    <Compile Include="MatchActionResult.cs" />
+    <Compile Include="TrafficCopActions.cs" />
     <Compile Include="TrafficCopRoutePolicy.cs" />
     <Compile Include="RequestContext.cs" />
     <Compile Include="TrafficCopRegistration.cs" />
