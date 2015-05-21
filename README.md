@@ -52,7 +52,7 @@ The default actions are:
 * `PageNotFound404(string redirectUrl)`
 * `Gone410()`
     
-**Step 3: Register your cusotm traffic policy**
+**Step 3: Register your custom traffic policy**
 
 Once you've created your custom policy you need to register it with your custom registry using the ``RegisterRoutePolicy` method (see in Step 1).
 
