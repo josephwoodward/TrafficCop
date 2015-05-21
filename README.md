@@ -19,10 +19,30 @@ A TrafficCop Registry is a simply class that you use to register your traffic po
     {
         public MyCustomRegistry()
         {
-            this.RegisterRoutePolicy(new BlockBadWebsite1Policy());
+            this.RegisterRoutePolicy(new BlockBadWebsitePolicy());
             this.RegisterRoutePolicy(new RedirectReallyBadWebsitePolicy());
         }
     }
+
+**Step 2: Create your custom policy**
+
+A policy is a set of rules that once registered gets enforced on incoming HTTP traffic. The following action demonstrates how you could block all incoming traffic from the IP address of `22.231.113.64`. You can implement your own rules within the `Match()` method using the properties within the `IRequestContext` parameter.
+
+    public class BlockBadWebsitePolicy : TrafficCopRoutePolicy
+    {
+        public override bool Match(IRequestContext requestContext)
+        {
+            bool isBadTraffic = (requestContext.IpAddress == "22.231.113.64");
+            return isBadTraffic;
+        }
+
+        public override void MatchAction(object actions)
+        {
+            var act = actions as TrafficCopActions;
+            if (act != null) act.PageNotFound404();
+        }
+    }
+
 
 **Register TrafficCop**
 
