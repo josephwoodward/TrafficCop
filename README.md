@@ -55,6 +55,7 @@ The default actions are:
 **Register your cusotm traffic policy**
 
 Once you've created your custom policy you need to register it with your custom registry using the ``RegisterRoutePolicy` method (see in Step 1).
+
     ...
     public MyCustomRegistry()
     {
