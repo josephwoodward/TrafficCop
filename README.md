@@ -13,7 +13,7 @@ Getting started with TrafficCop is painless. After referencing the source .dll i
 
 Before setting up TrafficCop you must first create a custom registry and register it with TrafficCop.
 
-A TrafficCop Registry is a simply class that you use to register your policies. For instance, if you wanted to block traffic from a certain website or IP address you would create a registry then register your traffic policies via your registry using the `RegisterRoutePolicy()` method as seen in the example below.
+A TrafficCop Registry is a simply class that you use to register your traffic policies/rules via the `RegisterRoutePolicy()` method as demonstrated below.
 
     public class MyCustomRegistry : TrafficCopRegistration
     {
