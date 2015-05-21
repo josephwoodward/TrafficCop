@@ -7,10 +7,9 @@ TrafficCop was initially created as a means of combatting website referral spam 
 Getting Started
 -------
 
-Getting started with TrafficCop is painless.
+Getting started with TrafficCop is painless. After referencing the source .dll in your ASP.NET MVC project (NuGet package is on its way!) follow the following steps.
 
-
-Simply reference the source .dll (NuGet package is on its way which will make this easier) and cre
+**Step 1:**
 
 Coming soon.
 
