@@ -15,9 +15,9 @@ Before setting up TrafficCop you must first create a custom registry and registe
 
 A TrafficCop Registry is a simply class that you use to register your traffic policies/rules via the `RegisterRoutePolicy()` method as demonstrated below.
 
-    public class MyCustomRegistry : TrafficCopRegistration
+    public class YourCustomRegistry : TrafficCopRegistration
     {
-        public MyCustomRegistry()
+        public YourCustomRegistry()
         {
             this.RegisterRoutePolicy(new BlockBadWebsitePolicy());
             this.RegisterRoutePolicy(new RedirectReallyBadWebsitePolicy());
@@ -52,29 +52,34 @@ The default actions are:
 * `PageNotFound404(string redirectUrl)`
 * `Gone410()`
     
-**Register your cusotm traffic policy**
+**Step 3: Register your cusotm traffic policy**
 
 Once you've created your custom policy you need to register it with your custom registry using the ``RegisterRoutePolicy` method (see in Step 1).
 
     ...
-    public MyCustomRegistry()
+    public YourCustomRegistry()
     {
         this.RegisterRoutePolicy(new BlockBadWebsitePolicy());
     }
     ...
 
-**Register TrafficCop**
+**Step 4: Add your registry to TrafficCop**
 
-Register TrafficCop in your `global.asax.cs` file within the `Application_Start()` method like so:
+The final step to setting up TrafficCop now that you've created your custom registry and policies is to add your registration to TrafficCop and reference it in your application. To do this edit your `Global.asax.cs` and call `TrafficCop.Register(new YourCustomRegistry());` within the `Application_Start` method, like so:
 
     protected void Application_Start()
     {
         ...
-        Core.TrafficCop.Register(new MyCustomRegistry());
+        Core.TrafficCop.Register(new YourCustomRegistry());
         ...
     }
 
-Coming soon.
+Now all we need to do is run the policies against your incoming traffic using the `TrafficCop.Watch` method by calling it within the `Application_BeginRequest` method within `Global.asax.cs`.
+
+        protected void Application_BeginRequest()
+        {
+            TrafficCop.Watch();
+        }
 
 License
 -------
