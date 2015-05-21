@@ -76,10 +76,10 @@ The final step to setting up TrafficCop now that you've created your custom regi
 
 Now all we need to do is run the policies against your incoming traffic using the `TrafficCop.Watch` method by calling it within the `Application_BeginRequest` method within `Global.asax.cs`.
 
-        protected void Application_BeginRequest()
-        {
-            TrafficCop.Watch();
-        }
+    protected void Application_BeginRequest()
+    {
+        TrafficCop.Watch();
+    }
 
 License
 -------
