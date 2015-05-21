@@ -23,16 +23,31 @@ namespace TrafficCop.Core
             get { return _contextMaker.Invoke(); }
         }
 
-        public virtual void Redirect301(string url)
+        public virtual void MovedPermanently301(string redirectUrl)
         {
             Context.Response.StatusCode = 301;
-            Context.Response.Redirect(url);
+            Context.Response.Redirect(redirectUrl);
         }
 
-        public virtual void PageNotFound404(string url)
+        public virtual void Forbibben403()
+        {
+            Context.Response.StatusCode = 403;
+        }
+
+        public virtual void PageNotFound404()
         {
             Context.Response.StatusCode = 404;
-            Context.Response.Redirect(url);
+        }
+
+        public virtual void PageNotFound404(string redirectUrl)
+        {
+            Context.Response.StatusCode = 404;
+            Context.Response.Redirect(redirectUrl);
+        }
+
+        public virtual void Gone410()
+        {
+            Context.Response.StatusCode = 410;
         }
     }
 }

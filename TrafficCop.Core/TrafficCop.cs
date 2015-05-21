@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web.UI;
 using TrafficCop.Core.Exceptions;
 
 namespace TrafficCop.Core
@@ -10,13 +9,13 @@ namespace TrafficCop.Core
         public static IList<TrafficCopRoutePolicy> Routes { get; set; }
         public static MatchActionResult Actions { get; set; }
 
-        public static void Register(TrafficCopRegistration customRegistry)
+        public static void Register(TrafficCopRegistration registry)
         {
-            if (customRegistry == null)
-                throw new ArgumentNullException("customRegistry");
+            if (registry == null)
+                throw new ArgumentNullException("registry");
 
-            Routes = customRegistry.GetRoutes();
-            Actions = customRegistry.MatchActions;
+            Routes = registry.GetRoutes();
+            Actions = registry.PolicyMatchActions;
         }
 
         public static void Watch()

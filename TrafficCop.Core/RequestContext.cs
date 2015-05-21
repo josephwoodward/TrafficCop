@@ -39,13 +39,13 @@ namespace TrafficCop.Core
 
         private string GetIpAddress()
         {
-            string ip = (Context.Request.ServerVariables["HTTP_X_FORWARDED_FOR"] ?? "").Split(',').Last().Trim();
-            if (string.IsNullOrEmpty(ip))
+            string ipAddress = (Context.Request.ServerVariables["HTTP_X_FORWARDED_FOR"] ?? "").Split(',').Last().Trim();
+            if (string.IsNullOrEmpty(ipAddress))
             {
-                ip = Context.Request.ServerVariables["REMOTE_ADDR"];
+                ipAddress = Context.Request.ServerVariables["REMOTE_ADDR"];
             }
 
-            return ip;
+            return ipAddress;
         }
     }
 }

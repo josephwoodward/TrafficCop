@@ -27,7 +27,7 @@ namespace TrafficCop.Tests
             return true;
         }
 
-        public override void MatchAction(MatchActionResult actions)
+        public override void MatchAction(object actions)
         {
         }
     }
@@ -39,7 +39,7 @@ namespace TrafficCop.Tests
             return false;
         }
 
-        public override void MatchAction(MatchActionResult actions)
+        public override void MatchAction(object actions)
         {
         }
     }

@@ -4,23 +4,23 @@ namespace TrafficCop.Core
 {
     public abstract class TrafficCopRegistration
     {
-        public IList<TrafficCopRoutePolicy> RouteCommands = new List<TrafficCopRoutePolicy>();
+        public IList<TrafficCopRoutePolicy> RoutePolicies = new List<TrafficCopRoutePolicy>();
 
-        public MatchActionResult MatchActions { get; set; }
+        public MatchActionResult PolicyMatchActions { get; set; }
 
         protected TrafficCopRegistration()
         {
-            this.MatchActions = new TrafficCopActions();
+            this.PolicyMatchActions = new TrafficCopActions();
         }
 
-        public void WatchRoute(TrafficCopRoutePolicy trafficCopRequest)
+        public void RegisterRoutePolicy(TrafficCopRoutePolicy routePolicy)
         {
-            this.RouteCommands.Add(trafficCopRequest);
+            this.RoutePolicies.Add(routePolicy);
         }
 
         public virtual IList<TrafficCopRoutePolicy> GetRoutes()
         {
-            return this.RouteCommands;
+            return this.RoutePolicies;
         }
     }
 }

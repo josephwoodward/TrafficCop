@@ -6,7 +6,7 @@ namespace TrafficCop.Demo
     {
         public override bool Match(IRequestContext requestContext)
         {
-            bool isLocal = (requestContext.IpAddress == "127.0.0.1");
+            bool isLocal = (requestContext.IpAddress == "127.0.0.1" || requestContext.IpAddress == "::1");
 
             return isLocal;
         }

@@ -8,10 +8,10 @@ namespace TrafficCop.Tests
         [Ignore]
         public void Should_allow_policy_registration()
         {
-            this.TestRegistration.Setup(x => x.WatchRoute(new GuiltyTestPolicy()));
+            this.TestRegistration.Setup(x => x.RegisterRoutePolicy(new GuiltyTestPolicy()));
             var resgration = this.TestRegistration.Object;
 
-            Assert.IsNotEmpty(resgration.RouteCommands);
+            Assert.IsNotEmpty(resgration.RoutePolicies);
         }
     }
 }
