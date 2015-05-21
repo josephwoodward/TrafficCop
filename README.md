@@ -2,10 +2,15 @@
 
 TrafficCop is super simple way of analyzing incoming traffic and imposing rules or policies on requests.
 
-TrafficCop was initially created as a means of combatting website referral spam but it's application can also be used for other means such as traffic shaping.
+TrafficCop was initially created as a means of combatting website referral spam but its application can also be used for other means such as traffic shaping or IP blocking/white listing.
 
-Usage
+Getting Started
 -------
+
+Getting started with TrafficCop is painless.
+
+
+Simply reference the source .dll (NuGet package is on its way which will make this easier) and cre
 
 Coming soon.
 
