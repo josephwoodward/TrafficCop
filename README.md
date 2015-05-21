@@ -70,7 +70,7 @@ The final step to setting up TrafficCop now that you've created your custom regi
     protected void Application_Start()
     {
         ...
-        Core.TrafficCop.Register(new YourCustomRegistry());
+        TrafficCop.Register(new YourCustomRegistry());
         ...
     }
 
