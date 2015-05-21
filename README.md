@@ -9,16 +9,16 @@ Getting Started
 
 Getting started with TrafficCop is painless. After referencing the source .dll in your ASP.NET MVC project (NuGet package is on its way!) follow the following steps.
 
-**Create a custom TrafficCop registry **
+**Step 1: Create a custom TrafficCop registry**
 
-A registry is a logical grouping or profile that you can register with TrafficCop.
+A TrafficCop Registry is a simply class that you use to register your policies. So for instance, if you wanted to block traffic from a certain website or IP address you would create a registry and then add your traffic policies to your newly created registry.
 
-    **MyCustomRegistry.cs**
     public class MyCustomRegistry : TrafficCopRegistration
     {
         public MyCustomRegistry()
         {
-            this.RegisterRoutePolicy(new BlockFreeSocialButtons());
+            this.RegisterRoutePolicy(new BlockBadWebsite1Policy());
+            this.RegisterRoutePolicy(new RedirectReallyBadWebsitePolicy());
         }
     }
 
