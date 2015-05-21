@@ -63,7 +63,7 @@ Once you've created your custom policy you need to register it with your custom 
     }
     ...
 
-**Step 4: Add your registry to TrafficCop**
+**Step 4: Add your registry to TrafficCop and register with application**
 
 The final step to setting up TrafficCop now that you've created your custom registry and policies is to add your registration to TrafficCop and reference it in your application. To do this edit your `Global.asax.cs` and call `TrafficCop.Register(new YourCustomRegistry());` within the `Application_Start` method, like so:
 
