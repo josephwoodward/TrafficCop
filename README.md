@@ -46,11 +46,11 @@ A policy is a set of rules that once registered gets enforced on incoming HTTP t
 The `MatchAction` method is called when the traffic within your `Match` method is successfully matched. By default there are a set of actions available via the supplied `TrafficCopActions` paramter, however custom actions can be added by extending the TrafficCopActions base class.
     
 The default actions are:
-* MovedPermanently301(string redirectUrl)
-* Forbibben403()
-* PageNotFound404()
-* PageNotFound404(string redirectUrl)
-* Gone410()
+* `MovedPermanently301(string redirectUrl)`
+* `Forbibben403()`
+* `PageNotFound404()`
+* `PageNotFound404(string redirectUrl)`
+* `Gone410()`
     
 
 
