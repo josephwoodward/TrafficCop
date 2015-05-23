@@ -2,7 +2,7 @@
 
 TrafficCop is super simple way of analyzing incoming traffic and imposing rules or policies on requests.
 
-TrafficCop was initially created as a means of combatting website referral spam but its application can also be used for other means such as traffic shaping or IP blocking/white listing.
+TrafficCop was initially created as a means of combatting website referral spam ([read more about it on my blog here](http://josephwoodward.co.uk/2015/05/ip-address-referral-blocking-in-asp-net-mvc/)) but its application can also be used for other means such as traffic shaping or IP blocking/white listing.
 
 Getting Started
 -------
